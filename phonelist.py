@@ -48,6 +48,8 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "DELETE":
         name = input("  Name: ")
         delete_phone(conn, name)
+    elif cmd == "REMOVE":
+        print("  Unknown command: REMOVE")    
     elif cmd == "QUIT":
         save_phonelist(conn)
         exit()
