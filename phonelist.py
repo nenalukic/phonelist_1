@@ -10,7 +10,7 @@ conn = psycopg2.connect(
 
 def read_phonelist(C):
     cur = C.cursor()
-    cur.execute("SELECT * FROM phonelist;")
+    cur.execute("SELECT id, name, phone, address FROM phonelist;")
     rows = cur.fetchall()
     cur.close()
     return rows
