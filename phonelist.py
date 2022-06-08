@@ -36,6 +36,8 @@ while True: ## REPL - Read Execute Program Loop
                 add - add a phone number
                 delete - delete a contact
                 list - list all phone numbers
+                save - save changes to the database
+                help - show available commands
                 quit - quit the program
                 Command:
                 ''').upper()
@@ -50,6 +52,18 @@ while True: ## REPL - Read Execute Program Loop
         delete_phone(conn, name)
     elif cmd == "REMOVE":
         print("  Unknown command: REMOVE")    
-    elif cmd == "QUIT":
+    elif cmd == "SAVE":
         save_phonelist(conn)
+    elif cmd == "HELP":
+        print('''
+                Hello and welcome to the phone list, available commands:
+                add - add a phone number
+                delete - delete a contact
+                list - list all phone numbers
+                save - save changes to the database
+                help - show available commands
+                quit - quit the program
+                Command:
+                ''')    
+    elif cmd == "QUIT":
         exit()
