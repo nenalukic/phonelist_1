@@ -33,12 +33,12 @@ def save_phonelist(C):
 while True: ## REPL - Read Execute Program Loop
     cmd = input('''
                 Hello and welcome to the phone list, available commands:
-                ADD - add a phone number
-                DELETE - delete a contact
-                LIST - list all phone numbers
-                QUIT - quit the program
+                add - add a phone number
+                delete - delete a contact
+                list - list all phone numbers
+                quit - quit the program
                 Command:
-                ''')
+                ''').upper()
     if cmd == "LIST":
         print(read_phonelist(conn))
     elif cmd == "ADD":
